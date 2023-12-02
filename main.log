@@ -1,0 +1,1053 @@
+[1701538732] Log start
+[1701538732] Cmd: ./llama.cpp/main -m ./llama.cpp/zephyr-7b-beta.Q5_K_M.gguf -n 256 --repeat_penalty 1.0 --color -r User: -f ./llama.cpp/prompts/alpaca.txt
+[1701538732] main: build = 1601 (5a7d312)
+[1701538732] main: built with Apple clang version 14.0.3 (clang-1403.0.22.14.1) for arm64-apple-darwin22.5.0
+[1701538732] main: seed  = 1701538732
+[1701538732] main: llama backend init
+[1701538732] main: load the model and apply lora adapter, if any
+[1701538732] llama_model_loader: loaded meta data with 21 key-value pairs and 291 tensors from ./llama.cpp/zephyr-7b-beta.Q5_K_M.gguf (version GGUF V3 (latest))
+[1701538732] llama_model_loader: - tensor    0:                token_embd.weight q5_K     [  4096, 32000,     1,     1 ]
+[1701538732] llama_model_loader: - tensor    1:           blk.0.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor    2:            blk.0.ffn_down.weight q6_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor    3:            blk.0.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor    4:              blk.0.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor    5:            blk.0.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor    6:              blk.0.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor    7:         blk.0.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor    8:              blk.0.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor    9:              blk.0.attn_v.weight q6_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   10:           blk.1.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   11:            blk.1.ffn_down.weight q6_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   12:            blk.1.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   13:              blk.1.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   14:            blk.1.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   15:              blk.1.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   16:         blk.1.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   17:              blk.1.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   18:              blk.1.attn_v.weight q6_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   19:           blk.2.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   20:            blk.2.ffn_down.weight q6_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   21:            blk.2.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   22:              blk.2.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   23:            blk.2.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   24:              blk.2.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   25:         blk.2.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   26:              blk.2.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   27:              blk.2.attn_v.weight q6_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   28:            blk.3.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   29:              blk.3.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   30:              blk.3.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   31:         blk.3.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   32:              blk.3.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   33:              blk.3.attn_v.weight q6_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   34:           blk.3.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   35:            blk.3.ffn_down.weight q6_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   36:            blk.3.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   37:           blk.4.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   38:            blk.4.ffn_down.weight q5_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   39:            blk.4.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   40:              blk.4.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   41:            blk.4.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   42:              blk.4.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   43:         blk.4.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   44:              blk.4.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   45:              blk.4.attn_v.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   46:           blk.5.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   47:            blk.5.ffn_down.weight q5_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   48:            blk.5.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   49:              blk.5.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   50:            blk.5.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   51:              blk.5.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   52:         blk.5.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   53:              blk.5.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   54:              blk.5.attn_v.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   55:           blk.6.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   56:            blk.6.ffn_down.weight q6_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   57:            blk.6.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   58:              blk.6.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   59:            blk.6.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   60:              blk.6.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   61:         blk.6.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   62:              blk.6.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   63:              blk.6.attn_v.weight q6_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   64:           blk.7.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   65:            blk.7.ffn_down.weight q5_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   66:            blk.7.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   67:              blk.7.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   68:            blk.7.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   69:              blk.7.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   70:         blk.7.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   71:              blk.7.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   72:              blk.7.attn_v.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   73:              blk.8.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   74:         blk.8.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   75:              blk.8.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   76:              blk.8.attn_v.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   77:          blk.10.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   78:           blk.10.ffn_down.weight q5_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   79:           blk.10.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   80:             blk.10.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   81:           blk.10.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   82:             blk.10.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   83:        blk.10.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   84:             blk.10.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   85:             blk.10.attn_v.weight q6_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   86:          blk.11.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   87:           blk.11.ffn_down.weight q6_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   88:           blk.11.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   89:             blk.11.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   90:           blk.11.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   91:             blk.11.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   92:        blk.11.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   93:             blk.11.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   94:             blk.11.attn_v.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   95:           blk.12.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   96:             blk.12.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   97:             blk.12.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   98:        blk.12.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor   99:             blk.12.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  100:             blk.12.attn_v.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  101:           blk.8.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  102:            blk.8.ffn_down.weight q5_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  103:            blk.8.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  104:              blk.8.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  105:            blk.8.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  106:           blk.9.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  107:            blk.9.ffn_down.weight q5_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  108:            blk.9.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  109:              blk.9.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  110:            blk.9.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  111:              blk.9.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  112:         blk.9.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  113:              blk.9.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  114:              blk.9.attn_v.weight q6_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  115:          blk.12.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  116:           blk.12.ffn_down.weight q6_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  117:           blk.12.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  118:          blk.13.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  119:           blk.13.ffn_down.weight q5_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  120:           blk.13.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  121:             blk.13.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  122:           blk.13.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  123:             blk.13.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  124:        blk.13.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  125:             blk.13.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  126:             blk.13.attn_v.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  127:          blk.14.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  128:           blk.14.ffn_down.weight q5_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  129:           blk.14.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  130:             blk.14.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  131:           blk.14.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  132:             blk.14.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  133:        blk.14.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  134:             blk.14.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  135:             blk.14.attn_v.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  136:          blk.15.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  137:           blk.15.ffn_down.weight q6_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  138:           blk.15.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  139:             blk.15.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  140:           blk.15.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  141:             blk.15.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  142:        blk.15.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  143:             blk.15.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  144:             blk.15.attn_v.weight q6_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  145:          blk.16.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  146:           blk.16.ffn_down.weight q5_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  147:           blk.16.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  148:             blk.16.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  149:           blk.16.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  150:             blk.16.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  151:        blk.16.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  152:             blk.16.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  153:             blk.16.attn_v.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  154:             blk.17.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  155:        blk.17.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  156:             blk.17.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  157:             blk.17.attn_v.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  158:          blk.17.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  159:           blk.17.ffn_down.weight q5_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  160:           blk.17.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  161:             blk.17.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  162:           blk.17.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  163:          blk.18.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  164:           blk.18.ffn_down.weight q6_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  165:           blk.18.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  166:             blk.18.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  167:           blk.18.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  168:             blk.18.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  169:        blk.18.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  170:             blk.18.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  171:             blk.18.attn_v.weight q6_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  172:          blk.19.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  173:           blk.19.ffn_down.weight q5_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  174:           blk.19.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  175:             blk.19.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  176:           blk.19.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  177:             blk.19.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  178:        blk.19.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  179:             blk.19.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  180:             blk.19.attn_v.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  181:          blk.20.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  182:           blk.20.ffn_down.weight q5_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  183:           blk.20.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  184:             blk.20.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  185:           blk.20.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  186:             blk.20.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  187:        blk.20.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  188:             blk.20.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  189:             blk.20.attn_v.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  190:           blk.21.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  191:             blk.21.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  192:             blk.21.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  193:        blk.21.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  194:             blk.21.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  195:             blk.21.attn_v.weight q6_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  196:          blk.21.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  197:           blk.21.ffn_down.weight q6_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  198:           blk.21.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  199:          blk.22.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  200:           blk.22.ffn_down.weight q5_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  201:           blk.22.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  202:             blk.22.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  203:           blk.22.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  204:             blk.22.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  205:        blk.22.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  206:             blk.22.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  207:             blk.22.attn_v.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  208:          blk.23.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  209:           blk.23.ffn_down.weight q5_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  210:           blk.23.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  211:             blk.23.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  212:           blk.23.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  213:             blk.23.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  214:        blk.23.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  215:             blk.23.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  216:             blk.23.attn_v.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  217:          blk.24.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  218:           blk.24.ffn_down.weight q6_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  219:           blk.24.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  220:             blk.24.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  221:           blk.24.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  222:             blk.24.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  223:        blk.24.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  224:             blk.24.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  225:             blk.24.attn_v.weight q6_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  226:          blk.25.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  227:           blk.25.ffn_down.weight q5_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  228:           blk.25.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  229:             blk.25.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  230:           blk.25.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  231:             blk.25.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  232:        blk.25.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  233:             blk.25.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  234:             blk.25.attn_v.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  235:             blk.26.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  236:        blk.26.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  237:             blk.26.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  238:             blk.26.attn_v.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  239:          blk.26.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  240:           blk.26.ffn_down.weight q5_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  241:           blk.26.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  242:             blk.26.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  243:           blk.26.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  244:          blk.27.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  245:           blk.27.ffn_down.weight q6_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  246:           blk.27.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  247:             blk.27.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  248:           blk.27.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  249:             blk.27.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  250:        blk.27.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  251:             blk.27.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  252:             blk.27.attn_v.weight q6_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  253:          blk.28.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  254:           blk.28.ffn_down.weight q6_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  255:           blk.28.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  256:             blk.28.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  257:           blk.28.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  258:             blk.28.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  259:        blk.28.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  260:             blk.28.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  261:             blk.28.attn_v.weight q6_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  262:          blk.29.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  263:           blk.29.ffn_down.weight q6_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  264:           blk.29.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  265:             blk.29.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  266:           blk.29.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  267:             blk.29.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  268:        blk.29.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  269:             blk.29.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  270:             blk.29.attn_v.weight q6_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  271:           blk.30.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  272:             blk.30.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  273:             blk.30.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  274:        blk.30.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  275:             blk.30.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  276:             blk.30.attn_v.weight q6_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  277:                    output.weight q6_K     [  4096, 32000,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  278:          blk.30.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  279:           blk.30.ffn_down.weight q6_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  280:           blk.30.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  281:          blk.31.attn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  282:           blk.31.ffn_down.weight q6_K     [ 14336,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  283:           blk.31.ffn_gate.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  284:             blk.31.ffn_up.weight q5_K     [  4096, 14336,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  285:           blk.31.ffn_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  286:             blk.31.attn_k.weight q5_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  287:        blk.31.attn_output.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  288:             blk.31.attn_q.weight q5_K     [  4096,  4096,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  289:             blk.31.attn_v.weight q6_K     [  4096,  1024,     1,     1 ]
+[1701538732] llama_model_loader: - tensor  290:               output_norm.weight f32      [  4096,     1,     1,     1 ]
+[1701538732] llama_model_loader: - kv   0:                       general.architecture str              = llama
+[1701538732] llama_model_loader: - kv   1:                               general.name str              = huggingfaceh4_zephyr-7b-beta
+[1701538732] llama_model_loader: - kv   2:                       llama.context_length u32              = 32768
+[1701538732] llama_model_loader: - kv   3:                     llama.embedding_length u32              = 4096
+[1701538732] llama_model_loader: - kv   4:                          llama.block_count u32              = 32
+[1701538732] llama_model_loader: - kv   5:                  llama.feed_forward_length u32              = 14336
+[1701538732] llama_model_loader: - kv   6:                 llama.rope.dimension_count u32              = 128
+[1701538732] llama_model_loader: - kv   7:                 llama.attention.head_count u32              = 32
+[1701538732] llama_model_loader: - kv   8:              llama.attention.head_count_kv u32              = 8
+[1701538732] llama_model_loader: - kv   9:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+[1701538732] llama_model_loader: - kv  10:                       llama.rope.freq_base f32              = 10000.000000
+[1701538732] llama_model_loader: - kv  11:                          general.file_type u32              = 17
+[1701538732] llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = llama
+[1701538732] llama_model_loader: - kv  13:                      tokenizer.ggml.tokens arr[str,32000]   = ["<unk>", "<s>", "</s>", "<0x00>", "<...
+[1701538732] llama_model_loader: - kv  14:                      tokenizer.ggml.scores arr[f32,32000]   = [0.000000, 0.000000, 0.000000, 0.0000...
+[1701538732] llama_model_loader: - kv  15:                  tokenizer.ggml.token_type arr[i32,32000]   = [2, 3, 3, 6, 6, 6, 6, 6, 6, 6, 6, 6, ...
+[1701538732] llama_model_loader: - kv  16:                tokenizer.ggml.bos_token_id u32              = 1
+[1701538732] llama_model_loader: - kv  17:                tokenizer.ggml.eos_token_id u32              = 2
+[1701538732] llama_model_loader: - kv  18:            tokenizer.ggml.unknown_token_id u32              = 0
+[1701538732] llama_model_loader: - kv  19:            tokenizer.ggml.padding_token_id u32              = 2
+[1701538732] llama_model_loader: - kv  20:               general.quantization_version u32              = 2
+[1701538732] llama_model_loader: - type  f32:   65 tensors
+[1701538732] llama_model_loader: - type q5_K:  193 tensors
+[1701538732] llama_model_loader: - type q6_K:   33 tensors
+[1701538732] llm_load_vocab: special tokens definition check successful ( 259/32000 ).
+[1701538732] llm_load_print_meta: format           = GGUF V3 (latest)
+[1701538732] llm_load_print_meta: arch             = llama
+[1701538732] llm_load_print_meta: vocab type       = SPM
+[1701538732] llm_load_print_meta: n_vocab          = 32000
+[1701538732] llm_load_print_meta: n_merges         = 0
+[1701538732] llm_load_print_meta: n_ctx_train      = 32768
+[1701538732] llm_load_print_meta: n_embd           = 4096
+[1701538732] llm_load_print_meta: n_head           = 32
+[1701538732] llm_load_print_meta: n_head_kv        = 8
+[1701538732] llm_load_print_meta: n_layer          = 32
+[1701538732] llm_load_print_meta: n_rot            = 128
+[1701538732] llm_load_print_meta: n_gqa            = 4
+[1701538732] llm_load_print_meta: f_norm_eps       = 0.0e+00
+[1701538732] llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+[1701538732] llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+[1701538732] llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+[1701538732] llm_load_print_meta: n_ff             = 14336
+[1701538732] llm_load_print_meta: rope scaling     = linear
+[1701538732] llm_load_print_meta: freq_base_train  = 10000.0
+[1701538732] llm_load_print_meta: freq_scale_train = 1
+[1701538732] llm_load_print_meta: n_yarn_orig_ctx  = 32768
+[1701538732] llm_load_print_meta: rope_finetuned   = unknown
+[1701538732] llm_load_print_meta: model type       = 7B
+[1701538732] llm_load_print_meta: model ftype      = mostly Q5_K - Medium
+[1701538732] llm_load_print_meta: model params     = 7.24 B
+[1701538732] llm_load_print_meta: model size       = 4.78 GiB (5.67 BPW) 
+[1701538732] llm_load_print_meta: general.name     = huggingfaceh4_zephyr-7b-beta
+[1701538732] llm_load_print_meta: BOS token        = 1 '<s>'
+[1701538732] llm_load_print_meta: EOS token        = 2 '</s>'
+[1701538732] llm_load_print_meta: UNK token        = 0 '<unk>'
+[1701538732] llm_load_print_meta: PAD token        = 2 '</s>'
+[1701538732] llm_load_print_meta: LF token         = 13 '<0x0A>'
+[1701538732] llm_load_tensors: ggml ctx size =    0.11 MiB
+[1701538732] llm_load_tensors: mem required  = 4893.10 MiB
+[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] .[1701538732] 
+[1701538732] llama_new_context_with_model: n_ctx      = 512
+[1701538732] llama_new_context_with_model: freq_base  = 10000.0
+[1701538732] llama_new_context_with_model: freq_scale = 1
+[1701538732] llama_new_context_with_model: kv self size  =   64.00 MiB
+[1701538732] llama_build_graph: non-view tensors processed: 676/676
+[1701538732] ggml_metal_init: allocating
+[1701538732] ggml_metal_init: found device: Apple M2
+[1701538732] ggml_metal_init: picking default device: Apple M2
+[1701538732] ggml_metal_init: default.metallib not found, loading from source
+[1701538732] ggml_metal_init: loading '/Users/nikhilreddy/OSSHack/llama.cpp/ggml-metal.metal'
+[1701538732] ggml_metal_init: GPU name:   Apple M2
+[1701538732] ggml_metal_init: GPU family: MTLGPUFamilyApple8 (1008)
+[1701538732] ggml_metal_init: hasUnifiedMemory              = true
+[1701538732] ggml_metal_init: recommendedMaxWorkingSetSize  = 10922.67 MiB
+[1701538732] ggml_metal_init: maxTransferRate               = built-in GPU
+[1701538732] llama_new_context_with_model: compute buffer total size = 76.07 MiB
+[1701538732] llama_new_context_with_model: max tensor size =   102.54 MiB
+[1701538732] ggml_metal_add_buffer: allocated 'data            ' buffer, size =  4893.70 MiB[1701538732] , ( 4894.20 / 10922.67)[1701538732] 
+[1701538732] ggml_metal_add_buffer: allocated 'kv              ' buffer, size =    64.02 MiB[1701538732] , ( 4958.22 / 10922.67)[1701538732] 
+[1701538732] ggml_metal_add_buffer: allocated 'alloc           ' buffer, size =    73.02 MiB[1701538732] , ( 5031.23 / 10922.67)[1701538732] 
+[1701538732] warming up the model with an empty run
+[1701538733] n_ctx: 512
+[1701538733] 
+[1701538733] system_info: n_threads = 4 / 8 | AVX = 0 | AVX2 = 0 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | FMA = 0 | NEON = 1 | ARM_FMA = 1 | F16C = 0 | FP16_VA = 1 | WASM_SIMD = 0 | BLAS = 1 | SSE3 = 0 | SSSE3 = 0 | VSX = 0 | 
+[1701538733] add_bos: 1
+[1701538733] tokenize the prompt
+[1701538733] prompt: "Below is an instruction that describes a task. Write a response that appropriately completes the request.
+Can you find out the three things the person wants to do in the following text and put them in bullet points
+For any points that mention scheduling a metting with someone, extract from the text of there is mention of an agenda, then list this agenda separately in the bullet point like "Agenda: "
+Make this a json object, each bullet point is a entry in an array called thingsToDo, if an entry has an Agenda attached, put that in another key called agenda. Please only give me the json text as your response and nothing else.
+
+I want to get groceries tomorrow. I want to meet with Nikhil tomorrow with an agenda to get started on the the hackathon prep. I want to clean my apartment. OK. "
+[1701538733] tokens: [ '':1, ' Below':20811, ' is':349, ' an':396, ' instruction':13126, ' that':369, ' describes':13966, ' a':264, ' task':3638, '.':28723, ' Write':12018, ' a':264, ' response':2899, ' that':369, ' appropri':6582, 'ately':1999, ' complet':2691, 'es':274, ' the':272, ' request':2159, '.':28723, '':13, 'Can':6325, ' you':368, ' find':1300, ' out':575, ' the':272, ' three':1712, ' things':1722, ' the':272, ' person':1338, ' wants':5659, ' to':298, ' do':511, ' in':297, ' the':272, ' following':2296, ' text':2245, ' and':304, ' put':1658, ' them':706, ' in':297, ' bullet':17144, ' points':3569, '':13, 'For':2565, ' any':707, ' points':3569, ' that':369, ' mention':4389, ' schedul':10119, 'ing':288, ' a':264, ' met':1424, 'ting':1157, ' with':395, ' someone':2493, ',':28725, ' extract':9131, ' from':477, ' the':272, ' text':2245, ' of':302, ' there':736, ' is':349, ' mention':4389, ' of':302, ' an':396, ' agenda':20758, ',':28725, ' then':868, ' list':1274, ' this':456, ' agenda':20758, ' separately':22264, ' in':297, ' the':272, ' bullet':17144, ' point':1305, ' like':737, ' "':345, 'Ag':13859, 'enda':9279, ':':28747, ' "':345, '':13, 'Make':13806, ' this':456, ' a':264, ' json':7611, ' object':1928, ',':28725, ' each':1430, ' bullet':17144, ' point':1305, ' is':349, ' a':264, ' entry':4905, ' in':297, ' an':396, ' array':2293, ' called':1987, ' things':1722, 'To':1551, 'Do':4957, ',':28725, ' if':513, ' an':396, ' entry':4905, ' has':659, ' an':396, ' Ag':3786, 'enda':9279, ' attached':11053, ',':28725, ' put':1658, ' that':369, ' in':297, ' another':1698, ' key':1945, ' called':1987, ' agenda':20758, '.':28723, ' Please':5919, ' only':865, ' give':2111, ' me':528, ' the':272, ' json':7611, ' text':2245, ' as':390, ' your':574, ' response':2899, ' and':304, ' nothing':2511, ' else':1112, '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705 ]
+[1701538733] recalculate the cached logits (check): embd_inp.empty() false, n_matching_session_tokens 0, embd_inp.size() 180, session_tokens.size() 0, embd_inp.size() 180
+[1701538733] inp_pfx: [ '':1, ' ':28705, '':13, '':13, '###':27332, ' Inst':3133, 'ruction':3112, ':':28747, '':13, '':13 ]
+[1701538733] inp_sfx: [ ' ':28705, '':13, '':13, '###':27332, ' Response':12107, ':':28747, '':13, '':13 ]
+[1701538733] cml_pfx: [ '':1, ' ':28705, '':13, '<':28789, '|':28766, 'im':321, '_':28730, 'start':2521, '|':28766, '>':28767, 'user':1838, '':13 ]
+[1701538733] cml_sfx: [ ' <':523, '|':28766, 'im':321, '_':28730, 'end':416, '|':28766, '>':28767, '':13, '<':28789, '|':28766, 'im':321, '_':28730, 'start':2521, '|':28766, '>':28767, 'ass':489, 'istant':11143, '':13 ]
+[1701538733] sampling: 
+	repeat_last_n = 64, repeat_penalty = 1.000, frequency_penalty = 0.000, presence_penalty = 0.000
+	top_k = 40, tfs_z = 1.000, top_p = 0.950, min_p = 0.050, typical_p = 1.000, temp = 0.800
+	mirostat = 0, mirostat_lr = 0.100, mirostat_ent = 5.000
+[1701538733] generate: n_ctx = 512, n_batch = 512, n_predict = 256, n_keep = 0
+[1701538733] 
+
+[1701538733] embd_inp.size(): 180, n_consumed: 0
+[1701538733] eval: [ '':1, ' Below':20811, ' is':349, ' an':396, ' instruction':13126, ' that':369, ' describes':13966, ' a':264, ' task':3638, '.':28723, ' Write':12018, ' a':264, ' response':2899, ' that':369, ' appropri':6582, 'ately':1999, ' complet':2691, 'es':274, ' the':272, ' request':2159, '.':28723, '':13, 'Can':6325, ' you':368, ' find':1300, ' out':575, ' the':272, ' three':1712, ' things':1722, ' the':272, ' person':1338, ' wants':5659, ' to':298, ' do':511, ' in':297, ' the':272, ' following':2296, ' text':2245, ' and':304, ' put':1658, ' them':706, ' in':297, ' bullet':17144, ' points':3569, '':13, 'For':2565, ' any':707, ' points':3569, ' that':369, ' mention':4389, ' schedul':10119, 'ing':288, ' a':264, ' met':1424, 'ting':1157, ' with':395, ' someone':2493, ',':28725, ' extract':9131, ' from':477, ' the':272, ' text':2245, ' of':302, ' there':736, ' is':349, ' mention':4389, ' of':302, ' an':396, ' agenda':20758, ',':28725, ' then':868, ' list':1274, ' this':456, ' agenda':20758, ' separately':22264, ' in':297, ' the':272, ' bullet':17144, ' point':1305, ' like':737, ' "':345, 'Ag':13859, 'enda':9279, ':':28747, ' "':345, '':13, 'Make':13806, ' this':456, ' a':264, ' json':7611, ' object':1928, ',':28725, ' each':1430, ' bullet':17144, ' point':1305, ' is':349, ' a':264, ' entry':4905, ' in':297, ' an':396, ' array':2293, ' called':1987, ' things':1722, 'To':1551, 'Do':4957, ',':28725, ' if':513, ' an':396, ' entry':4905, ' has':659, ' an':396, ' Ag':3786, 'enda':9279, ' attached':11053, ',':28725, ' put':1658, ' that':369, ' in':297, ' another':1698, ' key':1945, ' called':1987, ' agenda':20758, '.':28723, ' Please':5919, ' only':865, ' give':2111, ' me':528, ' the':272, ' json':7611, ' text':2245, ' as':390, ' your':574, ' response':2899, ' and':304, ' nothing':2511, ' else':1112, '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705 ]
+[1701538736] n_past = 180
+[1701538736] sampled token:    13: '
+'
+[1701538736] last: [ ' in':297, ' another':1698, ' key':1945, ' called':1987, ' agenda':20758, '.':28723, ' Please':5919, ' only':865, ' give':2111, ' me':528, ' the':272, ' json':7611, ' text':2245, ' as':390, ' your':574, ' response':2899, ' and':304, ' nothing':2511, ' else':1112, '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13 ]
+[1701538736] n_remain: 255
+[1701538736] eval: [ '':13 ]
+[1701538736] n_past = 181
+[1701538736] sampled token:    13: '
+'
+[1701538736] last: [ ' another':1698, ' key':1945, ' called':1987, ' agenda':20758, '.':28723, ' Please':5919, ' only':865, ' give':2111, ' me':528, ' the':272, ' json':7611, ' text':2245, ' as':390, ' your':574, ' response':2899, ' and':304, ' nothing':2511, ' else':1112, '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13 ]
+[1701538736] n_remain: 254
+[1701538736] eval: [ '':13 ]
+[1701538737] n_past = 182
+[1701538737] sampled token: 15423: 'Here'
+[1701538737] last: [ ' key':1945, ' called':1987, ' agenda':20758, '.':28723, ' Please':5919, ' only':865, ' give':2111, ' me':528, ' the':272, ' json':7611, ' text':2245, ' as':390, ' your':574, ' response':2899, ' and':304, ' nothing':2511, ' else':1112, '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423 ]
+[1701538737] n_remain: 253
+[1701538737] eval: [ 'Here':15423 ]
+[1701538737] n_past = 183
+[1701538737] sampled token:   349: ' is'
+[1701538737] last: [ ' called':1987, ' agenda':20758, '.':28723, ' Please':5919, ' only':865, ' give':2111, ' me':528, ' the':272, ' json':7611, ' text':2245, ' as':390, ' your':574, ' response':2899, ' and':304, ' nothing':2511, ' else':1112, '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349 ]
+[1701538737] n_remain: 252
+[1701538737] eval: [ ' is':349 ]
+[1701538737] n_past = 184
+[1701538737] sampled token:   272: ' the'
+[1701538737] last: [ ' agenda':20758, '.':28723, ' Please':5919, ' only':865, ' give':2111, ' me':528, ' the':272, ' json':7611, ' text':2245, ' as':390, ' your':574, ' response':2899, ' and':304, ' nothing':2511, ' else':1112, '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272 ]
+[1701538737] n_remain: 251
+[1701538737] eval: [ ' the':272 ]
+[1701538737] n_past = 185
+[1701538737] sampled token:  9292: ' JSON'
+[1701538737] last: [ '.':28723, ' Please':5919, ' only':865, ' give':2111, ' me':528, ' the':272, ' json':7611, ' text':2245, ' as':390, ' your':574, ' response':2899, ' and':304, ' nothing':2511, ' else':1112, '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292 ]
+[1701538737] n_remain: 250
+[1701538737] eval: [ ' JSON':9292 ]
+[1701538737] n_past = 186
+[1701538737] sampled token:  2899: ' response'
+[1701538737] last: [ ' Please':5919, ' only':865, ' give':2111, ' me':528, ' the':272, ' json':7611, ' text':2245, ' as':390, ' your':574, ' response':2899, ' and':304, ' nothing':2511, ' else':1112, '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899 ]
+[1701538737] n_remain: 249
+[1701538737] eval: [ ' response':2899 ]
+[1701538738] n_past = 187
+[1701538738] sampled token: 28747: ':'
+[1701538738] last: [ ' only':865, ' give':2111, ' me':528, ' the':272, ' json':7611, ' text':2245, ' as':390, ' your':574, ' response':2899, ' and':304, ' nothing':2511, ' else':1112, '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747 ]
+[1701538738] n_remain: 248
+[1701538738] eval: [ ':':28747 ]
+[1701538738] n_past = 188
+[1701538738] sampled token:    13: '
+'
+[1701538738] last: [ ' give':2111, ' me':528, ' the':272, ' json':7611, ' text':2245, ' as':390, ' your':574, ' response':2899, ' and':304, ' nothing':2511, ' else':1112, '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13 ]
+[1701538738] n_remain: 247
+[1701538738] eval: [ '':13 ]
+[1701538738] n_past = 189
+[1701538738] sampled token:    13: '
+'
+[1701538738] last: [ ' me':528, ' the':272, ' json':7611, ' text':2245, ' as':390, ' your':574, ' response':2899, ' and':304, ' nothing':2511, ' else':1112, '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13 ]
+[1701538738] n_remain: 246
+[1701538738] eval: [ '':13 ]
+[1701538738] n_past = 190
+[1701538738] sampled token: 28792: '['
+[1701538738] last: [ ' the':272, ' json':7611, ' text':2245, ' as':390, ' your':574, ' response':2899, ' and':304, ' nothing':2511, ' else':1112, '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792 ]
+[1701538738] n_remain: 245
+[1701538738] eval: [ '[':28792 ]
+[1701538738] n_past = 191
+[1701538738] sampled token:    13: '
+'
+[1701538738] last: [ ' json':7611, ' text':2245, ' as':390, ' your':574, ' response':2899, ' and':304, ' nothing':2511, ' else':1112, '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13 ]
+[1701538738] n_remain: 244
+[1701538738] eval: [ '':13 ]
+[1701538739] n_past = 192
+[1701538739] sampled token: 28705: ' '
+[1701538739] last: [ ' text':2245, ' as':390, ' your':574, ' response':2899, ' and':304, ' nothing':2511, ' else':1112, '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705 ]
+[1701538739] n_remain: 243
+[1701538739] eval: [ ' ':28705 ]
+[1701538739] n_past = 193
+[1701538739] sampled token:   371: ' {'
+[1701538739] last: [ ' as':390, ' your':574, ' response':2899, ' and':304, ' nothing':2511, ' else':1112, '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371 ]
+[1701538739] n_remain: 242
+[1701538739] eval: [ ' {':371 ]
+[1701538739] n_past = 194
+[1701538739] sampled token:    13: '
+'
+[1701538739] last: [ ' your':574, ' response':2899, ' and':304, ' nothing':2511, ' else':1112, '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13 ]
+[1701538739] n_remain: 241
+[1701538739] eval: [ '':13 ]
+[1701538739] n_past = 195
+[1701538739] sampled token:  2287: '   '
+[1701538739] last: [ ' response':2899, ' and':304, ' nothing':2511, ' else':1112, '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287 ]
+[1701538739] n_remain: 240
+[1701538739] eval: [ '   ':2287 ]
+[1701538740] n_past = 196
+[1701538740] sampled token:   345: ' "'
+[1701538740] last: [ ' and':304, ' nothing':2511, ' else':1112, '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345 ]
+[1701538740] n_remain: 239
+[1701538740] eval: [ ' "':345 ]
+[1701538740] n_past = 197
+[1701538740] sampled token:   362: 'th'
+[1701538740] last: [ ' nothing':2511, ' else':1112, '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362 ]
+[1701538740] n_remain: 238
+[1701538740] eval: [ 'th':362 ]
+[1701538740] n_past = 198
+[1701538740] sampled token:   742: 'ings'
+[1701538740] last: [ ' else':1112, '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742 ]
+[1701538740] n_remain: 237
+[1701538740] eval: [ 'ings':742 ]
+[1701538740] n_past = 199
+[1701538740] sampled token:  1551: 'To'
+[1701538740] last: [ '.':28723, '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551 ]
+[1701538740] n_remain: 236
+[1701538740] eval: [ 'To':1551 ]
+[1701538740] n_past = 200
+[1701538740] sampled token:  4957: 'Do'
+[1701538740] last: [ '':13, '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957 ]
+[1701538740] n_remain: 235
+[1701538740] eval: [ 'Do':4957 ]
+[1701538741] n_past = 201
+[1701538741] sampled token:  1264: '":'
+[1701538741] last: [ '':13, 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264 ]
+[1701538741] n_remain: 234
+[1701538741] eval: [ '":':1264 ]
+[1701538741] n_past = 202
+[1701538741] sampled token:   345: ' "'
+[1701538741] last: [ 'I':28737, ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345 ]
+[1701538741] n_remain: 233
+[1701538741] eval: [ ' "':345 ]
+[1701538741] n_past = 203
+[1701538741] sampled token:  1458: 'Get'
+[1701538741] last: [ ' want':947, ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458 ]
+[1701538741] n_remain: 232
+[1701538741] eval: [ 'Get':1458 ]
+[1701538741] n_past = 204
+[1701538741] sampled token:  5977: ' gro'
+[1701538741] last: [ ' to':298, ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977 ]
+[1701538741] n_remain: 231
+[1701538741] eval: [ ' gro':5977 ]
+[1701538742] n_past = 205
+[1701538742] sampled token:  2742: 'cer'
+[1701538742] last: [ ' get':625, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742 ]
+[1701538742] n_remain: 230
+[1701538742] eval: [ 'cer':2742 ]
+[1701538742] n_past = 206
+[1701538742] sampled token:   497: 'ies'
+[1701538742] last: [ ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497 ]
+[1701538742] n_remain: 229
+[1701538742] eval: [ 'ies':497 ]
+[1701538742] n_past = 207
+[1701538742] sampled token: 10759: ' tomorrow'
+[1701538742] last: [ 'cer':2742, 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759 ]
+[1701538742] n_remain: 228
+[1701538742] eval: [ ' tomorrow':10759 ]
+[1701538742] n_past = 208
+[1701538742] sampled token:   611: '."'
+[1701538742] last: [ 'ies':497, ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611 ]
+[1701538742] n_remain: 227
+[1701538742] eval: [ '."':611 ]
+[1701538742] n_past = 209
+[1701538742] sampled token:    13: '
+'
+[1701538742] last: [ ' tomorrow':10759, '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13 ]
+[1701538742] n_remain: 226
+[1701538742] eval: [ '':13 ]
+[1701538743] n_past = 210
+[1701538743] sampled token: 28705: ' '
+[1701538743] last: [ '.':28723, ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705 ]
+[1701538743] n_remain: 225
+[1701538743] eval: [ ' ':28705 ]
+[1701538743] n_past = 211
+[1701538743] sampled token:  1630: ' },'
+[1701538743] last: [ ' I':315, ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630 ]
+[1701538743] n_remain: 224
+[1701538743] eval: [ ' },':1630 ]
+[1701538743] n_past = 212
+[1701538743] sampled token:    13: '
+'
+[1701538743] last: [ ' want':947, ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13 ]
+[1701538743] n_remain: 223
+[1701538743] eval: [ '':13 ]
+[1701538743] n_past = 213
+[1701538743] sampled token: 28705: ' '
+[1701538743] last: [ ' to':298, ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705 ]
+[1701538743] n_remain: 222
+[1701538743] eval: [ ' ':28705 ]
+[1701538743] n_past = 214
+[1701538743] sampled token:   371: ' {'
+[1701538743] last: [ ' meet':2647, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371 ]
+[1701538743] n_remain: 221
+[1701538743] eval: [ ' {':371 ]
+[1701538744] n_past = 215
+[1701538744] sampled token:    13: '
+'
+[1701538744] last: [ ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13 ]
+[1701538744] n_remain: 220
+[1701538744] eval: [ '':13 ]
+[1701538744] n_past = 216
+[1701538744] sampled token:  2287: '   '
+[1701538744] last: [ ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287 ]
+[1701538744] n_remain: 219
+[1701538744] eval: [ '   ':2287 ]
+[1701538744] n_past = 217
+[1701538744] sampled token:   345: ' "'
+[1701538744] last: [ 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345 ]
+[1701538744] n_remain: 218
+[1701538744] eval: [ ' "':345 ]
+[1701538744] n_past = 218
+[1701538744] sampled token:   362: 'th'
+[1701538744] last: [ 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362 ]
+[1701538744] n_remain: 217
+[1701538744] eval: [ 'th':362 ]
+[1701538744] n_past = 219
+[1701538744] sampled token:   742: 'ings'
+[1701538744] last: [ ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742 ]
+[1701538744] n_remain: 216
+[1701538744] eval: [ 'ings':742 ]
+[1701538745] n_past = 220
+[1701538745] sampled token:  1551: 'To'
+[1701538745] last: [ ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551 ]
+[1701538745] n_remain: 215
+[1701538745] eval: [ 'To':1551 ]
+[1701538745] n_past = 221
+[1701538745] sampled token:  4957: 'Do'
+[1701538745] last: [ ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957 ]
+[1701538745] n_remain: 214
+[1701538745] eval: [ 'Do':4957 ]
+[1701538745] n_past = 222
+[1701538745] sampled token:  1264: '":'
+[1701538745] last: [ ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264 ]
+[1701538745] n_remain: 213
+[1701538745] eval: [ '":':1264 ]
+[1701538745] n_past = 223
+[1701538745] sampled token:   345: ' "'
+[1701538745] last: [ ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345 ]
+[1701538745] n_remain: 212
+[1701538745] eval: [ ' "':345 ]
+[1701538746] n_past = 224
+[1701538746] sampled token:  7121: 'Me'
+[1701538746] last: [ ' get':625, ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121 ]
+[1701538746] n_remain: 211
+[1701538746] eval: [ 'Me':7121 ]
+[1701538746] n_past = 225
+[1701538746] sampled token:   299: 'et'
+[1701538746] last: [ ' started':2774, ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299 ]
+[1701538746] n_remain: 210
+[1701538746] eval: [ 'et':299 ]
+[1701538746] n_past = 226
+[1701538746] sampled token:   395: ' with'
+[1701538746] last: [ ' on':356, ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395 ]
+[1701538746] n_remain: 209
+[1701538746] eval: [ ' with':395 ]
+[1701538746] n_past = 227
+[1701538746] sampled token: 11952: ' Nik'
+[1701538746] last: [ ' the':272, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952 ]
+[1701538746] n_remain: 208
+[1701538746] eval: [ ' Nik':11952 ]
+[1701538746] n_past = 228
+[1701538746] sampled token: 28716: 'h'
+[1701538746] last: [ ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716 ]
+[1701538746] n_remain: 207
+[1701538746] eval: [ 'h':28716 ]
+[1701538747] n_past = 229
+[1701538747] sampled token:   309: 'il'
+[1701538747] last: [ ' hack':14413, 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309 ]
+[1701538747] n_remain: 206
+[1701538747] eval: [ 'il':309 ]
+[1701538747] n_past = 230
+[1701538747] sampled token: 10759: ' tomorrow'
+[1701538747] last: [ 'athon':19653, ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759 ]
+[1701538747] n_remain: 205
+[1701538747] eval: [ ' tomorrow':10759 ]
+[1701538747] n_past = 231
+[1701538747] sampled token:   395: ' with'
+[1701538747] last: [ ' prep':5015, '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395 ]
+[1701538747] n_remain: 204
+[1701538747] eval: [ ' with':395 ]
+[1701538747] n_past = 232
+[1701538747] sampled token:   396: ' an'
+[1701538747] last: [ '.':28723, ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396 ]
+[1701538747] n_remain: 203
+[1701538747] eval: [ ' an':396 ]
+[1701538748] n_past = 233
+[1701538748] sampled token: 20758: ' agenda'
+[1701538748] last: [ ' I':315, ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758 ]
+[1701538748] n_remain: 202
+[1701538748] eval: [ ' agenda':20758 ]
+[1701538748] n_past = 234
+[1701538748] sampled token:   298: ' to'
+[1701538748] last: [ ' want':947, ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298 ]
+[1701538748] n_remain: 201
+[1701538748] eval: [ ' to':298 ]
+[1701538748] n_past = 235
+[1701538748] sampled token:   625: ' get'
+[1701538748] last: [ ' to':298, ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625 ]
+[1701538748] n_remain: 200
+[1701538748] eval: [ ' get':625 ]
+[1701538748] n_past = 236
+[1701538748] sampled token:  2774: ' started'
+[1701538748] last: [ ' clean':3587, ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774 ]
+[1701538748] n_remain: 199
+[1701538748] eval: [ ' started':2774 ]
+[1701538749] n_past = 237
+[1701538749] sampled token:   356: ' on'
+[1701538749] last: [ ' my':586, ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356 ]
+[1701538749] n_remain: 198
+[1701538749] eval: [ ' on':356 ]
+[1701538749] n_past = 238
+[1701538749] sampled token:   272: ' the'
+[1701538749] last: [ ' apartment':9585, '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272 ]
+[1701538749] n_remain: 197
+[1701538749] eval: [ ' the':272 ]
+[1701538749] n_past = 239
+[1701538749] sampled token: 14413: ' hack'
+[1701538749] last: [ '.':28723, ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413 ]
+[1701538749] n_remain: 196
+[1701538749] eval: [ ' hack':14413 ]
+[1701538749] n_past = 240
+[1701538749] sampled token: 19653: 'athon'
+[1701538749] last: [ ' OK':12206, '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653 ]
+[1701538749] n_remain: 195
+[1701538749] eval: [ 'athon':19653 ]
+[1701538750] n_past = 241
+[1701538750] sampled token:  5015: ' prep'
+[1701538750] last: [ '.':28723, ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015 ]
+[1701538750] n_remain: 194
+[1701538750] eval: [ ' prep':5015 ]
+[1701538750] n_past = 242
+[1701538750] sampled token:  9191: '.",'
+[1701538750] last: [ ' ':28705, '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191 ]
+[1701538750] n_remain: 193
+[1701538750] eval: [ '.",':9191 ]
+[1701538750] n_past = 243
+[1701538750] sampled token:    13: '
+'
+[1701538750] last: [ '':13, '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13 ]
+[1701538750] n_remain: 192
+[1701538750] eval: [ '':13 ]
+[1701538750] n_past = 244
+[1701538750] sampled token:  2287: '   '
+[1701538750] last: [ '':13, 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287 ]
+[1701538750] n_remain: 191
+[1701538750] eval: [ '   ':2287 ]
+[1701538751] n_past = 245
+[1701538751] sampled token:   345: ' "'
+[1701538751] last: [ 'Here':15423, ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345 ]
+[1701538751] n_remain: 190
+[1701538751] eval: [ ' "':345 ]
+[1701538751] n_past = 246
+[1701538751] sampled token:   357: 'ag'
+[1701538751] last: [ ' is':349, ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357 ]
+[1701538751] n_remain: 189
+[1701538751] eval: [ 'ag':357 ]
+[1701538751] n_past = 247
+[1701538751] sampled token:  9279: 'enda'
+[1701538751] last: [ ' the':272, ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279 ]
+[1701538751] n_remain: 188
+[1701538751] eval: [ 'enda':9279 ]
+[1701538751] n_past = 248
+[1701538751] sampled token:  1264: '":'
+[1701538751] last: [ ' JSON':9292, ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264 ]
+[1701538751] n_remain: 187
+[1701538751] eval: [ '":':1264 ]
+[1701538752] n_past = 249
+[1701538752] sampled token:   371: ' {'
+[1701538752] last: [ ' response':2899, ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371 ]
+[1701538752] n_remain: 186
+[1701538752] eval: [ ' {':371 ]
+[1701538752] n_past = 250
+[1701538752] sampled token:    13: '
+'
+[1701538752] last: [ ':':28747, '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13 ]
+[1701538752] n_remain: 185
+[1701538752] eval: [ '':13 ]
+[1701538752] n_past = 251
+[1701538752] sampled token:   355: '     '
+[1701538752] last: [ '':13, '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355 ]
+[1701538752] n_remain: 184
+[1701538752] eval: [ '     ':355 ]
+[1701538752] n_past = 252
+[1701538752] sampled token:   345: ' "'
+[1701538752] last: [ '':13, '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345 ]
+[1701538752] n_remain: 183
+[1701538752] eval: [ ' "':345 ]
+[1701538753] n_past = 253
+[1701538753] sampled token:  1751: 'item'
+[1701538753] last: [ '[':28792, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751 ]
+[1701538753] n_remain: 182
+[1701538753] eval: [ 'item':1751 ]
+[1701538753] n_past = 254
+[1701538753] sampled token: 28740: '1'
+[1701538753] last: [ '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740 ]
+[1701538753] n_remain: 181
+[1701538753] eval: [ '1':28740 ]
+[1701538753] n_past = 255
+[1701538753] sampled token:  1264: '":'
+[1701538753] last: [ ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264 ]
+[1701538753] n_remain: 180
+[1701538753] eval: [ '":':1264 ]
+[1701538753] n_past = 256
+[1701538753] sampled token:   345: ' "'
+[1701538753] last: [ ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345 ]
+[1701538753] n_remain: 179
+[1701538753] eval: [ ' "':345 ]
+[1701538753] n_past = 257
+[1701538753] sampled token:  3278: 'Dis'
+[1701538753] last: [ '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278 ]
+[1701538753] n_remain: 178
+[1701538753] eval: [ 'Dis':3278 ]
+[1701538754] n_past = 258
+[1701538754] sampled token: 12804: 'cuss'
+[1701538754] last: [ '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804 ]
+[1701538754] n_remain: 177
+[1701538754] eval: [ 'cuss':12804 ]
+[1701538754] n_past = 259
+[1701538754] sampled token: 14413: ' hack'
+[1701538754] last: [ ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413 ]
+[1701538754] n_remain: 176
+[1701538754] eval: [ ' hack':14413 ]
+[1701538754] n_past = 260
+[1701538754] sampled token: 19653: 'athon'
+[1701538754] last: [ 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653 ]
+[1701538754] n_remain: 175
+[1701538754] eval: [ 'athon':19653 ]
+[1701538754] n_past = 261
+[1701538754] sampled token:  7661: ' goals'
+[1701538754] last: [ 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661 ]
+[1701538754] n_remain: 174
+[1701538754] eval: [ ' goals':7661 ]
+[1701538755] n_past = 262
+[1701538755] sampled token:   548: '",'
+[1701538755] last: [ 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548 ]
+[1701538755] n_remain: 173
+[1701538755] eval: [ '",':548 ]
+[1701538755] n_past = 263
+[1701538755] sampled token:    13: '
+'
+[1701538755] last: [ 'Do':4957, '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13 ]
+[1701538755] n_remain: 172
+[1701538755] eval: [ '':13 ]
+[1701538755] n_past = 264
+[1701538755] sampled token:   355: '     '
+[1701538755] last: [ '":':1264, ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355 ]
+[1701538755] n_remain: 171
+[1701538755] eval: [ '     ':355 ]
+[1701538755] n_past = 265
+[1701538755] sampled token:   345: ' "'
+[1701538755] last: [ ' "':345, 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345 ]
+[1701538755] n_remain: 170
+[1701538755] eval: [ ' "':345 ]
+[1701538755] n_past = 266
+[1701538755] sampled token:  1751: 'item'
+[1701538755] last: [ 'Get':1458, ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751 ]
+[1701538755] n_remain: 169
+[1701538755] eval: [ 'item':1751 ]
+[1701538756] n_past = 267
+[1701538756] sampled token: 28750: '2'
+[1701538756] last: [ ' gro':5977, 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750 ]
+[1701538756] n_remain: 168
+[1701538756] eval: [ '2':28750 ]
+[1701538756] n_past = 268
+[1701538756] sampled token:  1264: '":'
+[1701538756] last: [ 'cer':2742, 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264 ]
+[1701538756] n_remain: 167
+[1701538756] eval: [ '":':1264 ]
+[1701538756] n_past = 269
+[1701538756] sampled token:   345: ' "'
+[1701538756] last: [ 'ies':497, ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345 ]
+[1701538756] n_remain: 166
+[1701538756] eval: [ ' "':345 ]
+[1701538756] n_past = 270
+[1701538756] sampled token: 23572: 'Assign'
+[1701538756] last: [ ' tomorrow':10759, '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572 ]
+[1701538756] n_remain: 165
+[1701538756] eval: [ 'Assign':23572 ]
+[1701538756] n_past = 271
+[1701538756] sampled token:  9796: ' tasks'
+[1701538756] last: [ '."':611, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796 ]
+[1701538756] n_remain: 164
+[1701538756] eval: [ ' tasks':9796 ]
+[1701538757] n_past = 272
+[1701538757] sampled token:   298: ' to'
+[1701538757] last: [ '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298 ]
+[1701538757] n_remain: 163
+[1701538757] eval: [ ' to':298 ]
+[1701538757] n_past = 273
+[1701538757] sampled token:  1918: ' team'
+[1701538757] last: [ ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918 ]
+[1701538757] n_remain: 162
+[1701538757] eval: [ ' team':1918 ]
+[1701538757] n_past = 274
+[1701538757] sampled token:  3338: ' members'
+[1701538757] last: [ ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338 ]
+[1701538757] n_remain: 161
+[1701538757] eval: [ ' members':3338 ]
+[1701538757] n_past = 275
+[1701538757] sampled token: 28739: '"'
+[1701538757] last: [ '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739 ]
+[1701538757] n_remain: 160
+[1701538757] eval: [ '"':28739 ]
+[1701538757] n_past = 276
+[1701538757] sampled token:    13: '
+'
+[1701538757] last: [ ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13 ]
+[1701538757] n_remain: 159
+[1701538757] eval: [ '':13 ]
+[1701538758] n_past = 277
+[1701538758] sampled token:  2287: '   '
+[1701538758] last: [ ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287 ]
+[1701538758] n_remain: 158
+[1701538758] eval: [ '   ':2287 ]
+[1701538758] n_past = 278
+[1701538758] sampled token:   443: ' }'
+[1701538758] last: [ '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443 ]
+[1701538758] n_remain: 157
+[1701538758] eval: [ ' }':443 ]
+[1701538758] n_past = 279
+[1701538758] sampled token:    13: '
+'
+[1701538758] last: [ '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13 ]
+[1701538758] n_remain: 156
+[1701538758] eval: [ '':13 ]
+[1701538758] n_past = 280
+[1701538758] sampled token: 28705: ' '
+[1701538758] last: [ ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705 ]
+[1701538758] n_remain: 155
+[1701538758] eval: [ ' ':28705 ]
+[1701538759] n_past = 281
+[1701538759] sampled token:  1630: ' },'
+[1701538759] last: [ 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630 ]
+[1701538759] n_remain: 154
+[1701538759] eval: [ ' },':1630 ]
+[1701538759] n_past = 282
+[1701538759] sampled token:    13: '
+'
+[1701538759] last: [ 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13 ]
+[1701538759] n_remain: 153
+[1701538759] eval: [ '':13 ]
+[1701538759] n_past = 283
+[1701538759] sampled token: 28705: ' '
+[1701538759] last: [ 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13, ' ':28705 ]
+[1701538759] n_remain: 152
+[1701538759] eval: [ ' ':28705 ]
+[1701538759] n_past = 284
+[1701538759] sampled token:   371: ' {'
+[1701538759] last: [ 'Do':4957, '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371 ]
+[1701538759] n_remain: 151
+[1701538759] eval: [ ' {':371 ]
+[1701538759] n_past = 285
+[1701538759] sampled token:    13: '
+'
+[1701538759] last: [ '":':1264, ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13 ]
+[1701538759] n_remain: 150
+[1701538759] eval: [ '':13 ]
+[1701538760] n_past = 286
+[1701538760] sampled token:  2287: '   '
+[1701538760] last: [ ' "':345, 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287 ]
+[1701538760] n_remain: 149
+[1701538760] eval: [ '   ':2287 ]
+[1701538760] n_past = 287
+[1701538760] sampled token:   345: ' "'
+[1701538760] last: [ 'Me':7121, 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345 ]
+[1701538760] n_remain: 148
+[1701538760] eval: [ ' "':345 ]
+[1701538760] n_past = 288
+[1701538760] sampled token:   362: 'th'
+[1701538760] last: [ 'et':299, ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362 ]
+[1701538760] n_remain: 147
+[1701538760] eval: [ 'th':362 ]
+[1701538760] n_past = 289
+[1701538760] sampled token:   742: 'ings'
+[1701538760] last: [ ' with':395, ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742 ]
+[1701538760] n_remain: 146
+[1701538760] eval: [ 'ings':742 ]
+[1701538760] n_past = 290
+[1701538760] sampled token:  1551: 'To'
+[1701538760] last: [ ' Nik':11952, 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551 ]
+[1701538760] n_remain: 145
+[1701538760] eval: [ 'To':1551 ]
+[1701538761] n_past = 291
+[1701538761] sampled token:  4957: 'Do'
+[1701538761] last: [ 'h':28716, 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957 ]
+[1701538761] n_remain: 144
+[1701538761] eval: [ 'Do':4957 ]
+[1701538761] n_past = 292
+[1701538761] sampled token:  1264: '":'
+[1701538761] last: [ 'il':309, ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264 ]
+[1701538761] n_remain: 143
+[1701538761] eval: [ '":':1264 ]
+[1701538761] n_past = 293
+[1701538761] sampled token:   345: ' "'
+[1701538761] last: [ ' tomorrow':10759, ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345 ]
+[1701538761] n_remain: 142
+[1701538761] eval: [ ' "':345 ]
+[1701538761] n_past = 294
+[1701538761] sampled token: 22139: 'Clean'
+[1701538761] last: [ ' with':395, ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Clean':22139 ]
+[1701538761] n_remain: 141
+[1701538761] eval: [ 'Clean':22139 ]
+[1701538762] n_past = 295
+[1701538762] sampled token:   586: ' my'
+[1701538762] last: [ ' an':396, ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Clean':22139, ' my':586 ]
+[1701538762] n_remain: 140
+[1701538762] eval: [ ' my':586 ]
+[1701538762] n_past = 296
+[1701538762] sampled token:  9585: ' apartment'
+[1701538762] last: [ ' agenda':20758, ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Clean':22139, ' my':586, ' apartment':9585 ]
+[1701538762] n_remain: 139
+[1701538762] eval: [ ' apartment':9585 ]
+[1701538762] n_past = 297
+[1701538762] sampled token:   611: '."'
+[1701538762] last: [ ' to':298, ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Clean':22139, ' my':586, ' apartment':9585, '."':611 ]
+[1701538762] n_remain: 138
+[1701538762] eval: [ '."':611 ]
+[1701538762] n_past = 298
+[1701538762] sampled token:    13: '
+'
+[1701538762] last: [ ' get':625, ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Clean':22139, ' my':586, ' apartment':9585, '."':611, '':13 ]
+[1701538762] n_remain: 137
+[1701538762] eval: [ '':13 ]
+[1701538762] n_past = 299
+[1701538762] sampled token: 28705: ' '
+[1701538762] last: [ ' started':2774, ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Clean':22139, ' my':586, ' apartment':9585, '."':611, '':13, ' ':28705 ]
+[1701538762] n_remain: 136
+[1701538762] eval: [ ' ':28705 ]
+[1701538763] n_past = 300
+[1701538763] sampled token:   443: ' }'
+[1701538763] last: [ ' on':356, ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Clean':22139, ' my':586, ' apartment':9585, '."':611, '':13, ' ':28705, ' }':443 ]
+[1701538763] n_remain: 135
+[1701538763] eval: [ ' }':443 ]
+[1701538763] n_past = 301
+[1701538763] sampled token:    13: '
+'
+[1701538763] last: [ ' the':272, ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Clean':22139, ' my':586, ' apartment':9585, '."':611, '':13, ' ':28705, ' }':443, '':13 ]
+[1701538763] n_remain: 134
+[1701538763] eval: [ '':13 ]
+[1701538763] n_past = 302
+[1701538763] sampled token: 28793: ']'
+[1701538763] last: [ ' hack':14413, 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Clean':22139, ' my':586, ' apartment':9585, '."':611, '':13, ' ':28705, ' }':443, '':13, ']':28793 ]
+[1701538763] n_remain: 133
+[1701538763] eval: [ ']':28793 ]
+[1701538763] n_past = 303
+[1701538763] sampled token:     2: ''
+[1701538763] last: [ 'athon':19653, ' prep':5015, '.",':9191, '':13, '   ':2287, ' "':345, 'ag':357, 'enda':9279, '":':1264, ' {':371, '':13, '     ':355, ' "':345, 'item':1751, '1':28740, '":':1264, ' "':345, 'Dis':3278, 'cuss':12804, ' hack':14413, 'athon':19653, ' goals':7661, '",':548, '':13, '     ':355, ' "':345, 'item':1751, '2':28750, '":':1264, ' "':345, 'Assign':23572, ' tasks':9796, ' to':298, ' team':1918, ' members':3338, '"':28739, '':13, '   ':2287, ' }':443, '':13, ' ':28705, ' },':1630, '':13, ' ':28705, ' {':371, '':13, '   ':2287, ' "':345, 'th':362, 'ings':742, 'To':1551, 'Do':4957, '":':1264, ' "':345, 'Clean':22139, ' my':586, ' apartment':9585, '."':611, '':13, ' ':28705, ' }':443, '':13, ']':28793, '':2 ]
+[1701538763] n_remain: 132
+[1701538763] found EOS token
+[1701538763]  [end of text]
+[1701538763] 
+[1701538763] llama_print_timings:        load time =     737.55 ms
+[1701538763] llama_print_timings:      sample time =       5.35 ms /   124 runs   (    0.04 ms per token, 23190.57 tokens per second)
+[1701538763] llama_print_timings: prompt eval time =    3233.42 ms /   180 tokens (   17.96 ms per token,    55.67 tokens per second)
+[1701538763] llama_print_timings:        eval time =   26944.23 ms /   123 runs   (  219.06 ms per token,     4.56 tokens per second)
+[1701538763] llama_print_timings:       total time =   30215.62 ms
+[1701538763] ggml_metal_free: deallocating
+[1701538763] Log end
